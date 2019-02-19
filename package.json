@@ -1,6 +1,6 @@
 {
   "name": "@alice-network/gateway-ethereum",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Solidity contracts for the gateway on Ethereum blockchain",
   "files": [
     "abis",
