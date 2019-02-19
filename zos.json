@@ -1,0 +1,8 @@
+{
+  "zosversion": "2",
+  "name": "gateway-ethereum",
+  "version": "1.0.0",
+  "contracts": {
+    "Gateway": "Gateway"
+  }
+}

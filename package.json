@@ -1,0 +1,56 @@
+{
+  "name": "@alice-network/gateway-ethereum",
+  "version": "1.0.0",
+  "description": "Solidity contracts for the gateway on Ethereum blockchain",
+  "files": [
+    "abis",
+    "contracts",
+    "test"
+  ],
+  "scripts": {
+    "compile": "./node_modules/.bin/truffle compile --all",
+    "build-abis": "./node_modules/.bin/truffle compile && node scripts/build-abis.js",
+    "test": "./node_modules/.bin/truffle test",
+    "test:coverage": "./node_modules/.bin/solidity-coverage",
+    "deploy": "scripts/deploy.sh",
+    "upgrade": "scripts/upgrade.sh",
+    "console": "./node_modules/.bin/truffle console --network console",
+    "prepublish": "npm run build-abis"
+  },
+  "pre-commit": "build-abis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alice-network/gateway-ethereum"
+  },
+  "author": "Changhwan Choi <changhwan@dnext.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alice-network/gateway-ethereum"
+  },
+  "homepage": "https://github.com/alice-network/gateway-ethereum",
+  "dependencies": {
+    "openzeppelin-eth": "2.1.2",
+    "openzeppelin-solidity": "2.1.2",
+    "zos-lib": "2.1.0"
+  },
+  "devDependencies": {
+    "@alice-network/zos": "^2.2.1",
+    "bignumber.js": "8.0.1",
+    "chai": "4.2.0",
+    "chai-bn": "0.1.1",
+    "dotenv": "^6.2.0",
+    "openzeppelin-test-helpers": "^0.1.2",
+    "pre-commit": "^1.2.2",
+    "readline-sync": "1.4.9",
+    "solc": "0.5.0",
+    "solhint": "1.5.0",
+    "solidity-coverage": "0.5.4",
+    "truffle": "^5.0.1",
+    "truffle-hdwallet-provider": "^1.0.3",
+    "web3": "^1.0.0-beta.37",
+    "web3-utils": "^1.0.0-beta.37"
+  },
+  "engines": {
+    "node": ">= 8.15.0"
+  }
+}

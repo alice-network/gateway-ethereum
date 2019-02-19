@@ -1,0 +1,245 @@
+{
+  "contracts": {
+    "Gateway": {
+      "address": "0xd209968b75e3cc81dedfa78981058a2be65ef314",
+      "constructorCode": "608060405234801561001057600080fd5b5061267e806100206000396000f3fe",
+      "bodyBytecodeHash": "d7741ba36dd975a6a543ab22827bb58e60b6bf960f0197d928df1e7d2abee411",
+      "localBytecodeHash": "08a953ab7edca3c046317e1313a8e2c1c5e527003c1f6385d36dbbca1457fb70",
+      "deployedBytecodeHash": "08a953ab7edca3c046317e1313a8e2c1c5e527003c1f6385d36dbbca1457fb70",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_struct<DepositHandler.Deposit>": {
+          "id": "t_struct<DepositHandler.Deposit>",
+          "kind": "struct",
+          "label": "DepositHandler.Deposit",
+          "members": [
+            {
+              "label": "id",
+              "astId": 120,
+              "type": "t_uint256",
+              "src": "1184:7:2"
+            },
+            {
+              "label": "status",
+              "astId": 122,
+              "type": "t_enum<DepositHandler.DepositStatus>",
+              "src": "1201:20:2"
+            },
+            {
+              "label": "tokenType",
+              "astId": 124,
+              "type": "t_enum<DepositHandler.TokenType>",
+              "src": "1231:19:2"
+            },
+            {
+              "label": "owner",
+              "astId": 126,
+              "type": "t_address",
+              "src": "1260:13:2"
+            },
+            {
+              "label": "token",
+              "astId": 128,
+              "type": "t_address",
+              "src": "1283:13:2"
+            },
+            {
+              "label": "value",
+              "astId": 130,
+              "type": "t_uint256",
+              "src": "1306:10:2"
+            }
+          ]
+        },
+        "t_enum<DepositHandler.DepositStatus>": {
+          "id": "t_enum<DepositHandler.DepositStatus>",
+          "kind": "enum",
+          "label": "DepositHandler.DepositStatus",
+          "members": [
+            "invalid",
+            "deposited",
+            "failed"
+          ]
+        },
+        "t_enum<DepositHandler.TokenType>": {
+          "id": "t_enum<DepositHandler.TokenType>",
+          "kind": "enum",
+          "label": "DepositHandler.TokenType",
+          "members": [
+            "unknown",
+            "eth",
+            "erc20",
+            "erc721"
+          ]
+        },
+        "t_array:dyn<t_struct<DepositHandler.Deposit>>": {
+          "id": "t_array:dyn<t_struct<DepositHandler.Deposit>>",
+          "valueType": "t_struct<DepositHandler.Deposit>",
+          "length": "dyn",
+          "kind": "array",
+          "label": "DepositHandler.Deposit[]"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 4187,
+          "type": "t_bool",
+          "src": "757:24:28"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 4189,
+          "type": "t_bool",
+          "src": "876:25:28"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 4238,
+          "type": "t_array:50<t_uint256>",
+          "src": "1891:29:28"
+        },
+        {
+          "contract": "Ownable",
+          "path": "openzeppelin-eth/contracts/ownership/Ownable.sol",
+          "label": "_owner",
+          "astId": 2102,
+          "type": "t_address",
+          "src": "302:22:9"
+        },
+        {
+          "contract": "Ownable",
+          "path": "openzeppelin-eth/contracts/ownership/Ownable.sol",
+          "label": "______gap",
+          "astId": 2213,
+          "type": "t_array:50<t_uint256>",
+          "src": "2186:29:9"
+        },
+        {
+          "contract": "OracleManageable",
+          "path": "contracts/ownership/OracleManageable.sol",
+          "label": "_oracle",
+          "astId": 2002,
+          "type": "t_address",
+          "src": "225:23:8"
+        },
+        {
+          "contract": "OracleManageable",
+          "path": "contracts/ownership/OracleManageable.sol",
+          "label": "______gap",
+          "astId": 2094,
+          "type": "t_array:50<t_uint256>",
+          "src": "1369:29:8"
+        },
+        {
+          "contract": "ReentrancyGuard",
+          "path": "openzeppelin-eth/contracts/utils/ReentrancyGuard.sol",
+          "label": "_guardCounter",
+          "astId": 2221,
+          "type": "t_uint256",
+          "src": "415:29:10"
+        },
+        {
+          "contract": "ReentrancyGuard",
+          "path": "openzeppelin-eth/contracts/utils/ReentrancyGuard.sol",
+          "label": "______gap",
+          "astId": 2253,
+          "type": "t_array:50<t_uint256>",
+          "src": "1210:29:10"
+        },
+        {
+          "contract": "DepositHandler",
+          "path": "contracts/handler/DepositHandler.sol",
+          "label": "deposits",
+          "astId": 134,
+          "type": "t_array:dyn<t_struct<DepositHandler.Deposit>>",
+          "src": "1329:25:2"
+        },
+        {
+          "contract": "DepositHandler",
+          "path": "contracts/handler/DepositHandler.sol",
+          "label": "______gap",
+          "astId": 786,
+          "type": "t_array:50<t_uint256>",
+          "src": "9464:29:2"
+        },
+        {
+          "contract": "WithdrawHandler",
+          "path": "contracts/handler/WithdrawHandler.sol",
+          "label": "usedNonces",
+          "astId": 824,
+          "type": "t_mapping<t_bool>",
+          "src": "602:39:3"
+        },
+        {
+          "contract": "WithdrawHandler",
+          "path": "contracts/handler/WithdrawHandler.sol",
+          "label": "______gap",
+          "astId": 1090,
+          "type": "t_array:50<t_uint256>",
+          "src": "4399:29:3"
+        },
+        {
+          "contract": "Gateway",
+          "path": "contracts/Gateway.sol",
+          "label": "______gap",
+          "astId": 28,
+          "type": "t_array:50<t_uint256>",
+          "src": "380:29:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "gateway-ethereum/Gateway": [
+      {
+        "address": "0x24cad2ef40685b35a13a60f93c80f1f681b52fe9",
+        "version": "1.0.0",
+        "implementation": "0xd209968b75e3cc81dedfa78981058a2be65ef314"
+      }
+    ]
+  },
+  "zosversion": "2",
+  "version": "1.0.0"
+}
